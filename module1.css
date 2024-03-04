@@ -1,0 +1,326 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap')
+
+body {
+    background-color: gray;
+}
+
+@media (max-width: 500px)  {
+    
+    body {
+        background-color: #0c7080;
+    }
+
+    .container {
+        height: 650px;
+        width: 350px;
+        margin-left: 70px;
+        margin-top: 20px;
+        border-radius: 20px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 155px 425px 80px;
+        grid-template-areas: "top" "middle" "bottom";
+        background-color: rgba(245, 245, 245, 0.822);
+    }
+
+    .head {
+        grid: top;
+        /* background-color: white; */
+        border-radius: 20px 20px 0px 0px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .head h2 span {
+        color: green;
+    }
+
+    .head .first {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 20px;
+        margin-right: 35px;
+    }
+
+    .head .first #bell {
+        font-size: 27px;
+        cursor: pointer;
+    }
+
+    .head .second {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 20px;
+        margin-right: 20px;
+        font-family: "Poppins", sans-serif;
+        font-weight: bold;
+        font-style: normal;
+    }
+
+    .head .second input {
+        padding-left: 50px;
+        padding-right: 10px;
+        width: 60%;
+        height: 50px;
+        border-radius: 10px;
+        outline: none;
+        border: none;
+        color: #264653;
+        background-color: beige;
+    }
+
+    .head .second #search {
+        position: absolute;
+        padding: 5px;
+        margin-left: 10px;
+        cursor: pointer;
+        color: #264653;
+    }
+
+    .head .second #tune {
+        background-color: #264653;
+        cursor: pointer;
+        color: white;
+        padding: 12px;
+        font-size: 30px;
+        border-radius: 18px;
+    }
+
+    /* Head Finished After search bar and tune */
+
+    .content {
+         grid: middle;
+         width: 320px;
+         font-family: "Poppins", sans-serif;
+         font-weight: bold;
+         font-size: 12px;
+         font-style: normal;
+         /* background-color: gray; */
+    }
+
+    .content .scrollMenu {
+        margin-top: 10px;
+        margin-left: 20px;
+        width: 310px;
+        overflow-x: scroll;
+        scrollbar-width: none;
+        display: flex;
+        gap: 18px;
+    }
+
+    .content .scrollMenu a {
+        cursor: pointer;
+        color: #264653;
+        background-color: beige;
+        border-radius: 8px;
+        text-decoration: none;
+    }
+
+    .content .scrollMenu a:hover {
+        background-color: #264653;
+        color: whitesmoke;
+    }
+
+    .content .scrollMenu a li {
+        text-align: center;
+        list-style: none;
+        padding: 15px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .scrollMenu .menuSelected {
+        background-color: #264653;
+        color: whitesmoke;
+        border-radius: 8px;
+    }
+
+    .content .contentTopic {
+        display: flex;
+        font-family: "Poppins", sans-serif;
+        font-weight: bold;
+        font-style: normal;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .content .contentTopic h2 {
+        color: #264653;
+        margin-left: 14px;
+    }
+
+    .content .contentTopic h3 {
+        color: #0c7080;
+        position: relative; left: 16px;
+    }
+
+    .content .cardsRow {
+        height: 150px;
+        width: 100%;
+        display: flex;
+        margin-left: 12px;
+        gap: 10px;
+        /* background-color: gray; */
+        overflow-y: hidden;
+        overflow-x: scroll;
+        scrollbar-width: none;
+    }
+
+    .cardsRow .card {
+        height: 150px;
+        /* background-color: aqua; */
+    }
+
+    .cardsRow .card:nth-child(1) .card-pic {
+        cursor: pointer;
+        width: 185px;
+        height: 100px;
+        background-image: url("../images/caption.jpg");
+        background-size: cover;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: whitesmoke;
+    }
+
+    .cardsRow .card:nth-child(2) .card-pic {
+        cursor: pointer;
+        width: 185px;
+        height: 100px;
+        background-image: url("../images/Gianyar.jpg");
+        background-size: cover;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: whitesmoke;
+    }
+
+    .cardsRow .card:nth-child(3) .card-pic {
+        cursor: pointer;
+        width: 185px;
+        height: 100px;
+        background-image: url("../images/newYork.jpg");
+        background-size: cover;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: whitesmoke;
+    }
+
+    .cardsRow .card:nth-child(4) .card-pic {
+        cursor: pointer;
+        width: 185px;
+        height: 100px;
+        background-image: url("../images/dusty_cafe.jpg");
+        background-size: cover;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: whitesmoke;
+    }
+
+    .cardsRow .like{
+        margin-left: 155px;
+        margin-right: 5px;
+        margin-top: 3px;
+        font-size: 2em;
+    }
+
+    .like .bxs-heart {
+        color: whitesmoke;
+    }
+
+    .cardsRow .loc {
+        display: flex;
+        float: left;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .name {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .name .name-distance {
+        display: flex;
+        height: fit-content;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .name-distance p:first-child {
+        font-size: 14px;
+        margin-left: 5px;
+        font-family: "Poppins", sans-serif;
+    }
+
+    .name-distance p:last-child {
+        font-size: 11px;
+        font-family: "Poppins", sans-serif;
+        color: rgba(20, 9, 9, 0.644);
+    }
+
+    .name .rating {
+        width: fit-content;
+        font-size: 10px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 200;
+        display: flex;
+        position: relative; bottom: 20px;
+        justify-content: flex-start;
+        align-items: center;
+        margin-left: 8px;
+    }
+
+    .name .rating span {
+        color: gold;
+        padding-right: 3px;
+    }
+
+    .content .cardsDown {
+        /* background-color: gray; */
+        height: 170px;
+        width: 100%;
+        margin-left: 14px;
+    }
+
+    .special-div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: "Poppins", sans-serif;
+        height: 50px;
+    }
+
+    .special-div p:nth-child(1) {
+        font-size: large;
+        color: #264653;
+    }
+
+    .special-div p:nth-child(2) {
+        font-size: 14px;
+        color: #0c7080;
+    }
+
+    .cardsDown .rollDown {
+        background-color: gray;
+        height: 120px;
+        border-radius: 10px 10px 0px 0px;
+    }
+
+    .foot {
+        grid: bottom;
+        background-color: blue;
+        border-radius: 0px 0px 20px 20px;
+    }
+
+}
